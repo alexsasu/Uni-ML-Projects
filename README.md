@@ -1,8 +1,8 @@
 # Uni-ML-Projects
 
-The "Sentence Pair Classification" and "Tackling Unsupervised Learning" projects were made during the Practical Machine Learning course taken in the 1st year of the Artificial Intelligence master program at the Faculty of Mathematics and Computer Science, University of Bucharest.
+"Sentence Pair Classification" and "Tackling Unsupervised Learning" were individual projects made during the Practical Machine Learning course taken in the 1st year of the Artificial Intelligence master program at the Faculty of Mathematics and Computer Science, University of Bucharest.
 
-The "Deep Hallucination Classification" project was made during the Artificial Intelligence course taken in the 2nd year of the Computer Science bachelor program at the Faculty of Mathematics and Computer Science, University of Bucharest.
+"Deep Hallucination Classification" was an individual project made during the Artificial Intelligence course taken in the 2nd year of the Computer Science bachelor program at the Faculty of Mathematics and Computer Science, University of Bucharest.
 
 More details about each project, such as results, models architecture, and code, can be consulted in their associated directory.
 
