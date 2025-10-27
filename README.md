@@ -11,7 +11,7 @@ The documentation and implementation details of each project can be consulted in
 
 ## Image-Sentence Pair Matching
 
-This project consisted of participating in a [Kaggle competition](https://www.kaggle.com/competitions/isp-match-dl-2024/) for determining whether pairs of images and English texts matched or not (binary classification). We were required to use **deep learning models**. The main models used were a **CNN** and an **LSTM**, and they were used either as subnets in a bigger model, or individually. Basic **preprocessing methods** were employed, namely: text to lowercase, punctuation removal, stop words removal, image normalization. Features were extracted with the help of a **Tensorflow Tokenizer**. Due to a lack of comprehensiveness in the train/validation sets, and a biased test dataset with only 15 unique, more descriptive texts than train/validation, poor test performance was achieved.
+This project consisted of participating in a [Kaggle competition](https://www.kaggle.com/competitions/isp-match-dl-2024/) for determining whether pairs of images and English texts matched or not (binary classification). We were required to use **deep learning models**. The main models used were a **CNN** and an **LSTM**, and they were used either as subnets in a bigger model, or individually. Basic **preprocessing methods** were employed, namely: text to lowercase, punctuation removal, stop words removal, image normalization. Features were extracted with the help of a **Tensorflow Tokenizer**. Due to a lack of sample descriptiveness of the train/validation sets, and a biased test dataset with only 15 unique, more descriptive texts than train/validation, poor test performance was achieved.
 
 <details>
 <summary><b>Results:</b></summary>
@@ -33,7 +33,7 @@ Scores represent classification accuracies.
 
 ## Tackling Unsupervised Learning
 
-The main task of this project was to use two **clustering methods** on a labeled dataset. The chosen dataset was [Asirra](https://huggingface.co/datasets/cats_vs_dogs), containing pictures of cats and dogs, and the chosen models were **K-means** and **DBSCAN**. Methods such as the **elbow** and **silhouette score** were used in order to determine the appropriate number of clusters, and after clustering the images, the **Hungarian algorithm** was used to realize a mapping between cluster labels and actual class labels. The **feature extraction** method used consisted of the following: bringing each pixel of the image in the range [0.0, 1.0] through PyTorch’s ToTensor function, processing the image using the formula output[channel] = (input[channel] − mean[channel]) / std[channel] with the help of the PyTorch function Normalize, transforming the image from a 3D array into a 1D array of length height * width * channels.
+The main task of this project was to use two **clustering methods** on a labeled dataset. The chosen dataset was [Asirra](https://huggingface.co/datasets/cats_vs_dogs), containing pictures of cats and dogs, and the chosen models were **K-means** and **DBSCAN**. Methods such as the **elbow** and **silhouette score** were used in order to determine the appropriate number of clusters, and after clustering the images, the **Hungarian algorithm** was used to realize a mapping between cluster labels and actual class labels. The **feature extraction** method used consisted of the following: bringing each pixel of the image in the range [0.0, 1.0] through PyTorch’s ToTensor function, processing the image using the formula output[channel] = (input[channel] - mean[channel]) / std[channel] with the help of the PyTorch function Normalize, transforming the image from a 3D array into a 1D array of length height * width * channels.
 
 ## Sentence Pair Classification
 
@@ -61,7 +61,7 @@ Scores represent macro F1 values.
 
 ## Deep Hallucination Classification
 
-The project required joining a [Kaggle competition](https://www.kaggle.com/competitions/unibuc-2022-s24/) for classifying images hallucinated by **deep generative models** (multiclass classification). A multitude of models were tried: **CNN**, **Random Forest**, **KNN**, **SVM**; but the model that was mainly used was a CNN. By using the model architecture present in the "Deep Hallucination Classification" directory, the **5th place out of 128 participants** was attained.
+The project required joining a [Kaggle competition](https://www.kaggle.com/competitions/unibuc-2022-s24/) for classifying images hallucinated by **deep generative models** (multiclass classification). Multiple models were tried: **CNN**, **Random Forest**, **SVM**; but the model that was mainly used was a CNN. As such, by using the CNN architecture present in the "Deep Hallucination Classification" directory, the **5th place out of 128 participants** was attained.
 
 <details>
 <summary><b>Results:</b></summary>
@@ -74,7 +74,6 @@ Scores represent classification accuracies.
 | 5 | CNN | 64.91% | ~65% |
 | - | Random Forest and Grid Search CV | - | ~43% |
 | - | SVM | - | ~39% |
-| - | KNN for regression | - | ~26% |
 | - | Leaderboard baseline | 15.27%| - |
 |...|...|...|...|
 | 128 | Leaderboard worst | 14.32% | - |
